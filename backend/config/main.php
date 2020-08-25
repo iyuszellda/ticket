@@ -14,12 +14,19 @@ return [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
-            'layout' => 'left-menu',
+//            'layout' => 'left-menu',
         ],
         'munir' => [
             'class' => 'mdm\admin\Module',
             'layout' => 'left-menu',
         ],
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ],
+        'gridviewKrajee' =>  [
+            'class' => '\kartik\grid\Module',
+            // your other grid module settings
+        ]
     ],
 
     'components' => [
@@ -27,6 +34,18 @@ return [
             'theme' => [
                 'pathMap' => [
                     '@app/views' => '@app/views'
+                ],
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages', // if advanced application, set @frontend/messages
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        //'main' => 'main.php',
+                    ],
                 ],
             ],
         ],
