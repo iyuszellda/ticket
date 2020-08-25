@@ -23,6 +23,13 @@ return [
     ],
 
     'components' => [
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@app/views'
+                ],
+            ],
+        ],
         'as access' => [
             'class' => 'mdm\admin\components\AccessControl',
             'allowActions' => [
