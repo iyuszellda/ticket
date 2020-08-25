@@ -1,18 +1,17 @@
 <?php
 
 use yii\helpers\Html;
-//use yii\grid\GridView;
 use yii\widgets\Pjax;
 use kartik\grid\GridView;
-use yii\helpers\Url;
+
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\DivisiSearch */
+/* @var $searchModel backend\models\LogBookUserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Divisi';
+$this->title = 'Log Book Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="divisi-index">
+<div class="log-book-user-index">
 
     <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -28,18 +27,14 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
         'toolbar' =>  [
             [
-                'content' =>
-                    Html::button('<i class="glyphicon glyphicon-plus"></i>', [
-                        'class' => 'btn btn-success',
-                        'title' => Yii::t('kvgrid', 'Add '. 'Tahun Ajarans'),
-                        'onclick' => "redirect('".Url::to(['/admin/user/create'])."')",
-                    ]) ,
+                'content' =>'' ,
                 'options' => ['class' => 'btn-group mr-2']
             ],
         ],
         'columns' => [
-            'td_name',
-            'td_desc',
+            'user_id',
+            'tlbu_berita',
+            'tlbu_datetime',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
