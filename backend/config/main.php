@@ -14,7 +14,7 @@ return [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
-            'layout' => 'left-menu',
+//            'layout' => 'left-menu',
         ],
         'munir' => [
             'class' => 'mdm\admin\Module',
@@ -34,6 +34,18 @@ return [
             'theme' => [
                 'pathMap' => [
                     '@app/views' => '@app/views'
+                ],
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages', // if advanced application, set @frontend/messages
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        //'main' => 'main.php',
+                    ],
                 ],
             ],
         ],
