@@ -20,6 +20,13 @@ return [
             'class' => 'mdm\admin\Module',
             'layout' => 'left-menu',
         ],
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ],
+        'gridviewKrajee' =>  [
+            'class' => '\kartik\grid\Module',
+            // your other grid module settings
+        ]
     ],
 
     'components' => [
